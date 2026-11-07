@@ -1,6 +1,6 @@
 # Third-party notices
 
-Farmbound's own code is original (it began as the Farming part of the author's Farmbound plugin, hence the
+Farmbound's own code is original (it began as the Farming part of the author's Spyglass plugin, hence the
 `com.spyglassfarming` package). The data tables and the pieces of logic below come from, or are adapted from,
 BSD 2-Clause licensed projects and are credited here per the terms of those licenses.
 
@@ -106,7 +106,7 @@ copied and none of these plugins is used at runtime. These files are
 distributed under the same BSD 2-Clause terms reproduced above. Spell levels,
 rune costs, quest requirements, daily limits and charge behaviour were
 checked against the Old School RuneScape Wiki (facts only, no text copied).
-Shortest Path data was not used.
+The Shortest Path inputs used by Farmbound are listed under World navigation data below.
 
 ## Quest Helper facts and RuneLite client scripts (account/*, farming/*, prep/*)
 

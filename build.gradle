@@ -1,0 +1,56 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	mavenLocal()
+	maven {
+		url = 'https://repo.runelite.net'
+		content {
+			includeGroupByRegex("net\\.runelite.*")
+		}
+	}
+	mavenCentral()
+}
+
+def runeLiteVersion = 'latest.release'
+
+dependencies {
+	compileOnly group: 'net.runelite', name: 'client', version: runeLiteVersion
+
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+	testImplementation 'junit:junit:4.12'
+	testImplementation group: 'net.runelite', name: 'client', version: runeLiteVersion
+	testImplementation group: 'net.runelite', name: 'jshell', version: runeLiteVersion
+}
+
+group = 'com.spyglassfarming'
+version = '1.0.0'
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.release.set(11)
+}
+
+test {
+	useJUnit()
+	// RuneLite finds its folder (~/.runelite) from user.home when its classes load. Tests point that
+	// at a throw-away folder in build/, so the real plugin-data lookup runs without touching the real one.
+	def testHome = layout.buildDirectory.dir('test-home').get().asFile
+	doFirst { delete testHome; testHome.mkdirs() }
+	systemProperty 'user.home', testHome.absolutePath
+	systemProperty 'spyglassfarming.testHome', testHome.absolutePath
+}
+
+// Launches a local RuneLite client with this plugin loaded, for trying it by hand
+// (src/test/.../SpyglassFarmingPluginTest).
+tasks.register('run', JavaExec) {
+	group = 'application'
+	description = 'Launches a local RuneLite client with this plugin loaded.'
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass.set('com.spyglassfarming.SpyglassFarmingPluginTest')
+	jvmArgs "-ea", "-da:net.runelite.client.plugins.gpu.ModelUploader"
+	args "--developer-mode", "--debug"
+}

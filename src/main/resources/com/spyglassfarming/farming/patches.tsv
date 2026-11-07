@@ -1,0 +1,124 @@
+# Farming patches by area, read by FarmingPatchCatalog. An area is followed by its patches.
+# Varbits are RuneLite gameval VarbitID names with their ids; tests check every name=id pair.
+#
+# Row types (tab-separated; "-" is empty or none):
+#   area        name  owning region  bounds  alias regions (comma-separated)   bounds are defined in FarmingPatchCatalog
+#   patch       patch id  label  patch type  transmit varbit
+#   allotments  slug  first slug  first label  second slug  second label        two allotments, a flower and a herb patch
+#
+# Derived from RuneLite's FarmingWorld (master @ e98399f931c6, BSD 2-Clause; see THIRD_PARTY_NOTICES.md).
+# Ids of the first (Phase B) catalogue are kept exactly: herb.<site>, allotment.<site>.<n|s|nw|se>, tree.<site>. Patch ids are persisted.
+# "allotments" is the standard site: allotments on A and B, flower on C, herb on D (compost E not catalogued).
+area	Al Kharid	13106	ANYWHERE	13362,13105
+patch	cactus.al_kharid	-	CACTUS	FARMING_TRANSMIT_A=4771
+area	Aldarin	5421	ANYWHERE	5165,5166,5422,5677,5678
+patch	hops.aldarin	-	HOPS	FARMING_TRANSMIT_A=4771
+area	Anglers' Retreat	9770	ANYWHERE	-
+patch	hardwood.anglers_retreat	-	HARDWOOD_TREE	FARMING_TRANSMIT_A=4771
+area	Ardougne	10290	ANYWHERE	10546
+patch	bush.ardougne	-	BUSH	FARMING_TRANSMIT_A=4771
+area	Ardougne	10548	ANYWHERE	-
+allotments	ardougne	n	North	s	South
+area	Auburnvale	5427	ANYWHERE	5428,5684
+patch	tree.auburnvale	-	TREE	FARMING_TRANSMIT_A=4771
+patch	belladonna.auburnvale	-	BELLADONNA	FARMING_TRANSMIT_B=4772
+area	Avium Savannah	6702	ANYWHERE	6446
+patch	hardwood.avium_savannah	-	HARDWOOD_TREE	FARMING_TRANSMIT_A=4771
+area	Brimhaven	11058	ANYWHERE	11057
+patch	fruit_tree.brimhaven	-	FRUIT_TREE	FARMING_TRANSMIT_A=4771
+patch	spirit_tree.brimhaven	-	SPIRIT_TREE	FARMING_TRANSMIT_B=4772
+area	Catherby	11062	CATHERBY	11061,11318,11317
+allotments	catherby	n	North	s	South
+area	Catherby	11317	CATHERBY_FRUIT_TREE	-
+patch	fruit_tree.catherby	-	FRUIT_TREE	FARMING_TRANSMIT_A=4771
+area	Civitas illa Fortis	6192	ANYWHERE	6447,6448,6449,6191,6193
+allotments	civitas	n	North	s	South
+area	Champions' Guild	12596	ANYWHERE	-
+patch	bush.champions_guild	-	BUSH	FARMING_TRANSMIT_A=4771
+area	Draynor Manor	12340	ANYWHERE	-
+patch	belladonna.draynor_manor	-	BELLADONNA	FARMING_TRANSMIT_A=4771
+area	Entrana	11060	ANYWHERE	11316
+patch	hops.entrana	-	HOPS	FARMING_TRANSMIT_A=4771
+area	Etceteria	10300	ANYWHERE	-
+patch	bush.etceteria	-	BUSH	FARMING_TRANSMIT_A=4771
+patch	spirit_tree.etceteria	-	SPIRIT_TREE	FARMING_TRANSMIT_B=4772
+area	Falador	11828	ANYWHERE	12084
+patch	tree.falador	-	TREE	FARMING_TRANSMIT_A=4771
+area	Falador	12083	FALADOR_ALLOTMENTS	-
+allotments	falador	nw	North West	se	South East
+area	Fossil Island	14651	FOSSIL_ISLAND	14907,14908,15164,14652,14906,14650,15162,15163
+patch	hardwood.fossil_island.east	East	HARDWOOD_TREE	FARMING_TRANSMIT_A=4771
+patch	hardwood.fossil_island.middle	Middle	HARDWOOD_TREE	FARMING_TRANSMIT_B=4772
+patch	hardwood.fossil_island.west	West	HARDWOOD_TREE	FARMING_TRANSMIT_C=4773
+area	Fossil Island (underwater)	15008	ANYWHERE	-
+patch	seaweed.fossil_island.n	North	SEAWEED	FARMING_TRANSMIT_A=4771
+patch	seaweed.fossil_island.s	South	SEAWEED	FARMING_TRANSMIT_B=4772
+area	Gnome Stronghold	9781	ANYWHERE	9782,9526,9525
+patch	tree.gnome_stronghold	-	TREE	FARMING_TRANSMIT_A=4771
+patch	fruit_tree.gnome_stronghold	-	FRUIT_TREE	FARMING_TRANSMIT_B=4772
+# Great Conch: the calquat only (its two coral nurseries, A and B, are not catalogued).
+area	Great Conch	12581	ANYWHERE	12325,12326,12327,12580,12581,12582,12583,12836,12837,12838,12839,13092,13093,13194
+patch	calquat.great_conch	-	CALQUAT	FARMING_TRANSMIT_C=4773
+area	Harmony	15148	ANYWHERE	-
+patch	allotment.harmony	-	ALLOTMENT	FARMING_TRANSMIT_A=4771
+patch	herb.harmony	-	HERB	FARMING_TRANSMIT_B=4772
+area	Kastori	5423	ANYWHERE	5167,5424
+patch	calquat.kastori	-	CALQUAT	FARMING_TRANSMIT_A=4771
+patch	fruit_tree.kastori	-	FRUIT_TREE	FARMING_TRANSMIT_B=4772
+patch	flower.kastori	-	FLOWER	FARMING_TRANSMIT_C=4773
+# RuneLite "Kourend" 6967: Hosidius (compost E not catalogued).
+area	Hosidius	6967	ANYWHERE	6711
+allotments	hosidius	ne	North East	sw	South West
+patch	spirit_tree.hosidius	-	SPIRIT_TREE	FARMING_TRANSMIT_F=7904
+area	Lletya	9265	ANYWHERE	11103
+patch	fruit_tree.lletya	-	FRUIT_TREE	FARMING_TRANSMIT_A=4771
+area	Lumbridge	12851	ANYWHERE	-
+patch	hops.lumbridge	-	HOPS	FARMING_TRANSMIT_A=4771
+area	Lumbridge	12594	ANYWHERE	12850
+patch	tree.lumbridge	-	TREE	FARMING_TRANSMIT_A=4771
+area	Canifis	13622	ANYWHERE	13878
+patch	mushroom.canifis	-	MUSHROOM	FARMING_TRANSMIT_A=4771
+area	Port Phasmatys	14391	ANYWHERE	14390
+allotments	morytania	nw	North West	se	South East
+area	Port Sarim	12082	PORT_SARIM	12083
+patch	spirit_tree.port_sarim	-	SPIRIT_TREE	FARMING_TRANSMIT_A=4771
+area	Rimmington	11570	ANYWHERE	11826
+patch	bush.rimmington	-	BUSH	FARMING_TRANSMIT_A=4771
+area	Seers' Village	10551	ANYWHERE	10550
+patch	hops.seers_village	-	HOPS	FARMING_TRANSMIT_A=4771
+area	Tai Bwo Wannai	11056	ANYWHERE	-
+patch	calquat.tai_bwo_wannai	-	CALQUAT	FARMING_TRANSMIT_A=4771
+area	Taverley	11573	ANYWHERE	11829
+patch	tree.taverley	-	TREE	FARMING_TRANSMIT_A=4771
+area	Tree Gnome Village	9777	ANYWHERE	10033
+patch	fruit_tree.tree_gnome_village	-	FRUIT_TREE	FARMING_TRANSMIT_A=4771
+area	Troll Stronghold	11321	ANYWHERE	-
+patch	herb.troll_stronghold	-	HERB	FARMING_TRANSMIT_A=4771
+area	Varrock	12854	ANYWHERE	12853
+patch	tree.varrock	-	TREE	FARMING_TRANSMIT_A=4771
+area	Yanille	10288	ANYWHERE	-
+patch	hops.yanille	-	HOPS	FARMING_TRANSMIT_A=4771
+area	Weiss	11325	ANYWHERE	-
+patch	herb.weiss	-	HERB	FARMING_TRANSMIT_A=4771
+area	Farming Guild	5021	ANYWHERE	-
+patch	hespori.farming_guild	-	HESPORI	FARMING_TRANSMIT_J=7908
+# The full 3x3 region area centred on the Farming Guild (big compost N not catalogued).
+area	Farming Guild	4922	ANYWHERE	5177,5178,5179,4921,4923,4665,4666,4667
+patch	tree.farming_guild	-	TREE	FARMING_TRANSMIT_G=7905
+patch	herb.farming_guild	-	HERB	FARMING_TRANSMIT_E=4775
+patch	bush.farming_guild	-	BUSH	FARMING_TRANSMIT_B=4772
+patch	flower.farming_guild	-	FLOWER	FARMING_TRANSMIT_H=7906
+patch	allotment.farming_guild.n	North	ALLOTMENT	FARMING_TRANSMIT_C=4773
+patch	allotment.farming_guild.s	South	ALLOTMENT	FARMING_TRANSMIT_D=4774
+patch	cactus.farming_guild	-	CACTUS	FARMING_TRANSMIT_F=7904
+patch	spirit_tree.farming_guild	-	SPIRIT_TREE	FARMING_TRANSMIT_A=4771
+patch	fruit_tree.farming_guild	-	FRUIT_TREE	FARMING_TRANSMIT_K=7909
+patch	anima.farming_guild	-	ANIMA	FARMING_TRANSMIT_M=7911
+patch	celastrus.farming_guild	-	CELASTRUS	FARMING_TRANSMIT_L=7910
+patch	redwood.farming_guild	-	REDWOOD	FARMING_TRANSMIT_I=7907
+# All of Prifddinas, and all of Prifddinas underground (compost D not catalogued).
+area	Prifddinas	13151	ANYWHERE	12895,12894,13150,12994,12993,12737,12738,12126,12127,13250
+patch	allotment.prifddinas.n	North	ALLOTMENT	FARMING_TRANSMIT_A=4771
+patch	allotment.prifddinas.s	South	ALLOTMENT	FARMING_TRANSMIT_B=4772
+patch	flower.prifddinas	-	FLOWER	FARMING_TRANSMIT_C=4773
+patch	crystal_tree.prifddinas	-	CRYSTAL_TREE	FARMING_TRANSMIT_E=4775

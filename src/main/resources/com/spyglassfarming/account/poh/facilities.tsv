@@ -1,0 +1,89 @@
+# House facilities by object id, and the nexus menu's destination names, read by PohKnowledge.
+# Object ids are RuneLite gameval ObjectID names with their ids; tests check every name=id pair.
+#
+# Row types (tab-separated):
+#   object       facility key  objects...         "a+b" keys name two facilities in one object
+#   portal       destination  objects...          a portal room portal (poh.portal.<destination>)
+#   portal_pair  destination  other destination  objects...   a two-destination portal (poh.portal_alt.<other>)
+#   nexus        destination  menu names...       names the nexus menu uses for the destination
+object	poh.jewellery_box.basic	POH_JEWELLERY_BOX_1=29154
+object	poh.jewellery_box.fancy	POH_JEWELLERY_BOX_2=29155
+object	poh.jewellery_box.ornate	POH_JEWELLERY_BOX_3=29156
+object	poh.mounted.xerics	POH_AMULET_XERIC=33419	POH_AMULET_XERIC_LOOKOUT=33411	POH_AMULET_XERIC_GLADE=33412	POH_AMULET_XERIC_INFERNO=33413	POH_AMULET_XERIC_HEART=33414	POH_AMULET_XERIC_HONOUR=33415
+object	poh.mounted.digsite	POH_AMULET_DIGSITE=33420	POH_AMULET_DIG_DIGSITE=33416	POH_AMULET_DIG_FOSSIL=33417	POH_AMULET_DIG_LITHKREN=33418
+# Portal chamber portals, by destination (gameval ObjectID / ObjectID1, RuneLite 1.13.1: teak, mahogany, marble). The
+# Varrock, Camelot and Watchtower portals have a second form per left-click destination (GE, Seers', Yanille).
+# The plain forms (no diary) go to one place. After the diary each has two forms, named by the left-click destination
+# ("..._VARROCK1ST", "..._GE1ST"); the other place is the right-click option (OSRS Wiki "Portal chamber": medium Varrock,
+# hard Kandarin, hard Ardougne diaries). Recorded as poh.portal.<left> and poh.portal_alt.<right>.
+# Not recorded: Wilderness destinations (Annakarl, Carrallangar, Ghorrock, Forgotten Cemetery): never routed.
+portal	varrock	POH_PORTAL_TEAK_VARROCK=13615	POH_PORTAL_MAG_VARROCK=13622	POH_PORTAL_MARBLE_VARROCK=13629
+portal_pair	varrock	grand_exchange	POH_PORTAL_TEAK_VARROCK_VARROCK1ST=33092	POH_PORTAL_MAHOGANY_VARROCK_VARROCK1ST=33098	POH_PORTAL_MARBLE_VARROCK_VARROCK1ST=33104
+portal_pair	grand_exchange	varrock	POH_PORTAL_TEAK_VARROCK_GE1ST=33093	POH_PORTAL_MAHOGANY_VARROCK_GE1ST=33099	POH_PORTAL_MARBLE_VARROCK_GE1ST=33105
+portal	lumbridge	POH_PORTAL_TEAK_LUMBRIDGE=13616	POH_PORTAL_MAG_LUMBRIDGE=13623	POH_PORTAL_MARBLE_LUMBRIDGE=13630
+portal	falador	POH_PORTAL_TEAK_FALADOR=13617	POH_PORTAL_MAG_FALADOR=13624	POH_PORTAL_MARBLE_FALADOR=13631
+portal	camelot	POH_PORTAL_TEAK_CAMELOT=13618	POH_PORTAL_MAG_CAMELOT=13625	POH_PORTAL_MARBLE_CAMELOT=13632
+portal_pair	camelot	seers	POH_PORTAL_TEAK_CAMELOT_CAMELOT1ST=33094	POH_PORTAL_MAHOGANY_CAMELOT_CAMELOT1ST=33100	POH_PORTAL_MARBLE_CAMELOT_CAMELOT1ST=33106
+portal_pair	seers	camelot	POH_PORTAL_TEAK_CAMELOT_SEERS1ST=33095	POH_PORTAL_MAHOGANY_CAMELOT_SEERS1ST=33101	POH_PORTAL_MARBLE_CAMELOT_SEERS1ST=33107
+portal	ardougne	POH_PORTAL_TEAK_ARDOUGNE=13619	POH_PORTAL_MAG_ARDOUGNE=13626	POH_PORTAL_MARBLE_ARDOUGNE=13633
+portal	watchtower	POH_PORTAL_TEAK_YANILLE=13620	POH_PORTAL_MAG_YANILLE=13627	POH_PORTAL_MARBLE_YANILLE=13634
+portal_pair	watchtower	yanille	POH_PORTAL_TEAK_YANILLE_WATCHTOWER1ST=33096	POH_PORTAL_MAHOGANY_YANILLE_WATCHTOWER1ST=33102	POH_PORTAL_MARBLE_YANILLE_WATCHTOWER1ST=33108
+portal_pair	yanille	watchtower	POH_PORTAL_TEAK_YANILLE_YANILLE1ST=33097	POH_PORTAL_MAHOGANY_YANILLE_YANILLE1ST=33103	POH_PORTAL_MARBLE_YANILLE_YANILLE1ST=33109
+portal	kourend	POH_PORTAL_TEAK_KOUREND=29345	POH_PORTAL_MAG_KOUREND=29353	POH_PORTAL_MARBLE_KOUREND=29361
+portal	catherby	POH_PORTAL_TEAK_CATHERBY=33432	POH_PORTAL_MAG_CATHERBY=33435	POH_PORTAL_MARBLE_CATHERBY=33438
+portal	troll_stronghold	POH_PORTAL_TEAK_STRONGHOLD=33179	POH_PORTAL_MAG_STRONGHOLD=33180	POH_PORTAL_MARBLE_STRONGHOLD=33181
+portal	weiss	POH_PORTAL_TEAK_WEISS=37581	POH_PORTAL_MAG_WEISS=37593	POH_PORTAL_MARBLE_WEISS=37605
+portal	draynor_manor	POH_PORTAL_TEAK_DRAYNOR_MANOR=37583	POH_PORTAL_MAG_DRAYNOR_MANOR=37595	POH_PORTAL_MARBLE_DRAYNOR_MANOR=37607
+portal	battlefront	POH_PORTAL_TEAK_BATTLEFRONT=37584	POH_PORTAL_MAG_BATTLEFRONT=37596	POH_PORTAL_MARBLE_BATTLEFRONT=37608
+portal	mind_altar	POH_PORTAL_TEAK_MIND_ALTAR=37585	POH_PORTAL_MAG_MIND_ALTAR=37597	POH_PORTAL_MARBLE_MIND_ALTAR=37609
+portal	salve_graveyard	POH_PORTAL_TEAK_SALVE_GRAVEYARD=37586	POH_PORTAL_MAG_SALVE_GRAVEYARD=37598	POH_PORTAL_MARBLE_SALVE_GRAVEYARD=37610
+portal	fenkenstrain	POH_PORTAL_TEAK_FENKENSTRAIN=37587	POH_PORTAL_MAG_FENKENSTRAIN=37599	POH_PORTAL_MARBLE_FENKENSTRAIN=37611
+portal	west_ardougne	POH_PORTAL_TEAK_WEST_ARDOUGNE=37588	POH_PORTAL_MAG_WEST_ARDOUGNE=37600	POH_PORTAL_MARBLE_WEST_ARDOUGNE=37612
+portal	harmony_island	POH_PORTAL_TEAK_HARMONY_ISLAND=37589	POH_PORTAL_MAG_HARMONY_ISLAND=37601	POH_PORTAL_MARBLE_HARMONY_ISLAND=37613
+portal	barrows	POH_PORTAL_TEAK_BARROWS=37591	POH_PORTAL_MAG_BARROWS=37603	POH_PORTAL_MARBLE_BARROWS=37615
+portal	ape_atoll_dungeon	POH_PORTAL_TEAK_APE_ATOLL=37592	POH_PORTAL_MAG_APE_ATOLL=37604	POH_PORTAL_MARBLE_APE_ATOLL=37616
+portal	arceuus_library	POH_PORTAL_TEAK_ARCEUUS_LIBRARY=41416	POH_PORTAL_MAG_ARCEUUS_LIBRARY=41417	POH_PORTAL_MARBLE_ARCEUUS_LIBRARY=41418
+portal	civitas	POH_PORTAL_TEAK_FORTIS=50713	POH_PORTAL_MAG_FORTIS=50714	POH_PORTAL_MARBLE_FORTIS=50715
+portal	kharyrll	POH_PORTAL_TEAK_KHARYRLL=29338	POH_PORTAL_MAG_KHARYRLL=29346	POH_PORTAL_MARBLE_KHARYRLL=29354
+portal	lunar_isle	POH_PORTAL_TEAK_LUNARISLE=29339	POH_PORTAL_MAG_LUNARISLE=29347	POH_PORTAL_MARBLE_LUNARISLE=29355
+portal	senntisten	POH_PORTAL_TEAK_SENNTISTEN=29340	POH_PORTAL_MAG_SENNTISTEN=29348	POH_PORTAL_MARBLE_SENNTISTEN=29356
+portal	waterbirth	POH_PORTAL_TEAK_WATERBIRTH=29342	POH_PORTAL_MAG_WATERBIRTH=29350	POH_PORTAL_MARBLE_WATERBIRTH=29358
+portal	fishing_guild	POH_PORTAL_TEAK_FISHINGGUILD=29343	POH_PORTAL_MAG_FISHINGGUILD=29351	POH_PORTAL_MARBLE_FISHINGGUILD=29359
+portal	marim	POH_PORTAL_TEAK_MARIM=29344	POH_PORTAL_MAG_MARIM=29352	POH_PORTAL_MARBLE_MARIM=29360
+object	poh.nexus	POH_TELENEXUS_1=33346	POH_TELENEXUS_2_MIDDLE=33347	POH_TELENEXUS_2_SIDE=33349	POH_TELENEXUS_2_CORNER=33350	POH_TELENEXUS_3=33351	POH_NEXUS_4_AMULET=33352	POH_NEXUS_5_AMULET=33353
+object	poh.fairy_ring	POH_FAIRY_RING=29228
+object	poh.spirit_tree	POH_SPIRIT_TREE=29227
+object	poh.fairy_ring+poh.spirit_tree	POH_SPIRIT_RING=29229
+# Portal nexus destinations by the name the nexus menus show (OSRS Wiki "Portal nexus" / "Portal chamber" destination names).
+nexus	varrock	Varrock
+nexus	grand_exchange	Grand Exchange
+nexus	lumbridge	Lumbridge
+nexus	falador	Falador
+nexus	camelot	Camelot
+nexus	seers	Seers' Village	Seers Village
+nexus	ardougne	East Ardougne	Ardougne
+nexus	watchtower	Watchtower
+nexus	yanille	Yanille
+nexus	kourend	Kourend Castle	Kourend
+nexus	catherby	Catherby
+nexus	troll_stronghold	Troll Stronghold
+nexus	weiss	Weiss
+nexus	trollheim	Trollheim
+nexus	draynor_manor	Draynor Manor
+nexus	battlefront	Battlefront
+nexus	mind_altar	Mind Altar
+nexus	salve_graveyard	Salve Graveyard
+nexus	fenkenstrain	Fenkenstrain's Castle	Fenkenstrains Castle
+nexus	west_ardougne	West Ardougne
+nexus	harmony_island	Harmony Island
+nexus	barrows	Barrows
+nexus	ape_atoll_dungeon	Ape Atoll Dungeon
+nexus	arceuus_library	Arceuus Library
+nexus	civitas	Civitas illa Fortis
+nexus	kharyrll	Kharyrll
+nexus	lunar_isle	Lunar Isle
+nexus	senntisten	Senntisten
+nexus	waterbirth	Waterbirth Island	Waterbirth
+nexus	fishing_guild	Fishing Guild
+nexus	marim	Marim	Ape Atoll
+nexus	lassar	Lassar	Ice Mountain
